@@ -8,15 +8,14 @@ body {
 
 /* Hero Section Styling */
 .hero-section {
-    position: relative;
-    padding: 30px 100px;
-    /* background: linear-gradient(to bottom, #ffffff, #f3f4f6); Gradasi untuk background */
+    /* position: relative; */
+    padding: 30px 100px 100px;
 }
 
 .hero-section .bgblue {
     position: absolute;
     top: 0;
-    left: 700px;
+    left: 600px;
     right: 0;
     bottom: 0;
     z-index: -1; /* Ensures the image stays behind other content */
@@ -26,7 +25,6 @@ body {
     width: 110%;
     height: 100%;
     object-fit: cover;
-    /* opacity: 0.3; Adjust opacity for subtle background effect */
 }
 
 /* Top Bar (Header dalam Hero Section) */
@@ -77,6 +75,7 @@ body {
 
 /* Hero Content */
 .hero-section .hero {
+    font-family: 'Plus Jakarta sans';
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -116,28 +115,36 @@ body {
     flex: 1;
 }
 
+.hero-section .hero .search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 50px; /* Membuat search bar lebih oval */
+    overflow: hidden;
+}
+
+.hero-section .hero .search-bar input {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 50px 0 0 50px; /* Menyambungkan input dengan tombol */
+    flex: 1;
+    font-size: 16px;
+}
+
 .hero-section .hero .search-bar button {
     padding: 10px 20px;
     border: none;
     background-color: #3b82f6;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
+    color: white;
+    border-radius: 0 50px 50px 0; /* Membuat sudut tombol lebih oval */
     cursor: pointer;
+    font-size: 16px;
 }
 
-/* Hero Books Section
-.hero-section .hero .books {
-    display: flex;
-    gap: 20px;
+.hero-section .hero .search-bar input:focus, 
+.hero-section .hero .search-bar button:focus {
+    outline: none;
 }
-
-.hero-section .hero .books img {
-    width: 150px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-} */
 
 
 /* Styling untuk section buku */
@@ -151,8 +158,8 @@ body {
 .filter {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin-bottom: 20px;
+    gap: 38px;
 }
 
 .filter select {
@@ -163,7 +170,7 @@ body {
 .filter h2 {
     font-size: 24px;
     font-weight: bold;
-    margin-left: 10px;
+    margin-left: 0;
 }
 
 /* Membuat jarak antara filter dan daftar buku */
@@ -172,6 +179,9 @@ body {
 }
 
 /* Styling untuk daftar buku */
+.buku {
+    margin-left: 150px;
+}
 .books {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
