@@ -6,34 +6,54 @@ body {
     background-color: #f5f5f5;
 }
 
-/* Header styling */
-header {
+/* Hero Section Styling */
+.hero-section {
+    position: relative;
+    padding: 30px 100px;
+    /* background: linear-gradient(to bottom, #ffffff, #f3f4f6); Gradasi untuk background */
+}
+
+.hero-section .bgblue {
+    position: absolute;
+    top: 0;
+    left: 600px;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Ensures the image stays behind other content */
+}
+
+.hero-section .bgblue img {
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    /* opacity: 0.3; Adjust opacity for subtle background effect */
+}
+
+/* Top Bar (Header dalam Hero Section) */
+.hero-section .top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 100px 70px 100px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 2px solid;
+    margin-bottom: 50px;
 }
 
-header .logo {
+.hero-section .logo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-header .logo img {
+.hero-section .logo img {
     height: 50px;
     width: auto;
 }
 
-header nav {
+.hero-section nav {
     display: flex;
     gap: 30px;
 }
 
-header nav a {
+.hero-section nav a {
     font-size: 18px;
     text-decoration: none;
     color: #333;
@@ -43,62 +63,60 @@ header nav a {
     transition: background-color 0.3s ease;
 }
 
-header nav a:hover {
+.hero-section nav a:hover {
     background-color: #3b82f6;
     color: white;
 }
 
-header .user-menu select {
+.hero-section .user-menu select {
     padding: 10px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     color: #5533FF;
 }
 
-
-/* Hero section */
-.hero {
+/* Hero Content */
+.hero-section .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
-    background: linear-gradient(135deg, #fff 50%, #3b82f6 50%);
 }
 
-.hero .text {
+.hero-section .hero .text {
     max-width: 50%;
 }
 
-.hero h1 {
+.hero-section .hero h1 {
     font-size: 48px;
     color: #000;
+    margin-bottom: 20px;
 }
 
-.hero h1 span {
+.hero-section .hero h1 span {
     color: #3b82f6;
     text-decoration: underline;
 }
 
-.hero p {
+.hero-section .hero p {
     font-size: 18px;
     color: #666;
     margin: 20px 0;
 }
 
-.hero .search-bar {
+.hero-section .hero .search-bar {
     display: flex;
     align-items: center;
     margin-top: 20px;
 }
 
-.hero .search-bar input {
+.hero-section .hero .search-bar input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
     flex: 1;
 }
 
-.hero .search-bar button {
+.hero-section .hero .search-bar button {
     padding: 10px 20px;
     border: none;
     background-color: #3b82f6;
@@ -107,18 +125,20 @@ header .user-menu select {
     cursor: pointer;
 }
 
-.hero .books {
+/* Hero Books Section */
+.hero-section .hero .books {
     display: flex;
     gap: 20px;
 }
 
-.hero .books img {
+.hero-section .hero .books img {
     width: 150px;
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Styling untuk section buku */
 /* Styling untuk section buku */
