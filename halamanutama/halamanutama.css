@@ -16,7 +16,7 @@ body {
 .hero-section .bgblue {
     position: absolute;
     top: 0;
-    left: 600px;
+    left: 700px;
     right: 0;
     bottom: 0;
     z-index: -1; /* Ensures the image stays behind other content */
@@ -125,7 +125,7 @@ body {
     cursor: pointer;
 }
 
-/* Hero Books Section */
+/* Hero Books Section
 .hero-section .hero .books {
     display: flex;
     gap: 20px;
@@ -137,7 +137,7 @@ body {
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+} */
 
 
 /* Styling untuk section buku */
