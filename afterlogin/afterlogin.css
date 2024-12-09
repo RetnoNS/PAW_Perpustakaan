@@ -86,7 +86,7 @@ body {
     }
 
     .top-bar nav {
-        display: none;  /* Awalnya sembunyikan nav untuk layar kecil */
+        display: none;  
     }
 
     .top-bar .navbar-toggler {

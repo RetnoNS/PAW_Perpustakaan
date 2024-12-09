@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data User - Admin Panel</title>
+    <!-- Tambahkan Font Awesome untuk ikon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="user.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Hallo Admin</h2>
+        <ul>
+            <li><a href="/admin/dashboard/dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li class="active"><a href="/admin/user/user.html"><i class="fas fa-user"></i> Data User</a></li>
+            <li><a href="/admin/buku/buku.html"><i class="fas fa-book"></i> Data Buku</a></li>
+            <li><a href="/admin/transaksi/transaksi.html"><i class="fas fa-exchange-alt"></i> Transaksi</a></li>
+        </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="search-bar">
+            <div class="search-wrapper">
+                <input type="text" placeholder="Cari..." class="search-input">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>zidni nurfauzi</td>
+                    <td>zidni123</td>
+                    <td>zidni@gmail.com</td>
+                    <td>087744374332</td>
+                    <td>
+                        <button class="action-btn edit-btn">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button class="action-btn delete-btn">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>retno nisa</td>
+                    <td>retno123</td>
+                    <td>retno@gmail.com</td>
+                    <td>08774463786</td>
+                    <td>
+                        <button class="action-btn edit-btn">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+                        <button class="action-btn delete-btn">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
