@@ -11,26 +11,26 @@
 </head>
 <body>
  
+    <!-- Navbar -->
+    <header class="top-bar">
+        <div class="logo">
+            <img alt="Library Logo" height="50" src="../img/emojione_books.png" width="50" />
+            <span>Perpustakaan <br>Online</span>
+        </div>
+        <nav>
+            <a href="#">Katalog Buku</a>
+            <a href="#">Pinjam Buku</a>
+            <a href="#">Contact Us</a>
+        </nav>
+        <div class="user-menu">
+            <a href="../login/login.html" class="login-link">Login</a>
+        </div>             
+    </header>
+
+    <!-- Hero Section -->
     <section class="hero-section">
         <div class="bgblue">
             <img src="/img/Group 239182.png" alt="bgblue">
-        </div>
-        <div class="top-bar">
-            <div class="logo">
-                <img alt="Library Logo" height="50" src="../img/emojione_books.png" width="50" />
-                <span>Perpustakaan <br>Online</span>
-            </div>
-            <nav>
-                <a href="#">Katalog Buku</a>
-                <a href="#">Pinjam Buku</a>
-                <a href="#">Contact Us</a>
-            </nav>
-            <div class="user-menu">
-                <p>Login</p>
-                <!-- <select>
-                    <option value="yassar">Yassar</option>
-                </select> -->
-            </div>
         </div>
         <div class="hero">
             <div class="text">
@@ -44,11 +44,17 @@
         </div>
     </section>
     
-    
     <section class="book-section">
         <div class="filter">
             <select>
                 <option value="genre">Genre Buku </option> 
+                <option value="genre">Fiksi Ilmiah </option>
+                <option value="genre">Fantasi </option>
+                <option value="genre">Romansa </option>
+                <option value="genre">Misteri </option>
+                <option value="genre">Biografi </option>
+                <option value="genre">Sejarah </option>
+                <option value="genre">Sains </option>
             </select>
             <h2>Buku</h2>
         </div>
@@ -113,20 +119,36 @@
     
     <footer class="footer">
         <div class="contact-info">
-            <i class="fas fa-phone"></i><p>+1 234 567 890</p>
-            <i class="fas fa-envelope"></i><p>info@library.com</p>
+            <div class="gbrinfo">
+                <img src="/img/fluent-color_library-20.png" alt="Library Icon" />
+            </div>
+            <div class="phone-info">
+                <img src="/img/phone.png" alt="Phone Icon" class="phone-icon"/>
+                <p>+62 888 999 777</p>
+            </div>
+            <div class="email-info">
+                <img src="/img/email.png" alt="email icon" class="email-icon"/>
+                <p>example@email.com</p>
+            </div>
+            <div class="lokasi-info">
+                <img src="/img/location.png" alt="lokasi icon" class="lokasi-icon"/>
+                <p>Jl. Jalan, Kota Bandung, Jawa Barat, Indonesia</p>
+            </div>
         </div>
+
         <div class="contact-form">
-            <h2>Contact Us</h2>
-            <input type="text" placeholder="Your Name"/>
-            <textarea placeholder="Your Message"></textarea>
+            <h2>Perpustakaan Online</h2>
+            <p>Any question or remarks? Let us know!</p>
+            <input type="text" placeholder="Enter your name" />
+            <input type="email" placeholder="Enter your email" />
+            <textarea placeholder="Type your message here"></textarea>
             <button>Submit</button>
         </div>
     </footer>
     
-    <div class="copyright">
+    <div class="copyright-info">
         <p>&copy; 2024 Perpustakaan Online. All rights reserved.</p>
-    </div>
+    </div>    
 
     <script src="beforelogin.js"></script>
 </body>
