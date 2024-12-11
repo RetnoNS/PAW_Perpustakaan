@@ -69,11 +69,22 @@ body {
     color: white;
 }
 
-.top-bar .user-menu select {
-    padding: 10px 10px;
-    border: 1px solid #ccc;
+.top-bar .user-menu {
+    padding: 10px 15px;
     border-radius: 5px;
-    color: #5533FF;
+    color: black;
+    background-color: white;
+}
+
+.login-link {
+    text-decoration: none;
+    color: inherit;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.login-link:hover {
+    color: #3b82f6; /* Warna saat di-hover */
 }
 
 /* Hero Content */
@@ -90,8 +101,8 @@ body {
 
 .hero-section .hero h1 {
     font-size: 48px;
-    color: #000;
-    margin-bottom: 20px;
+    color: #181E4B;
+    margin-bottom: 30px;
 }
 
 .hero-section .hero h1 span {
@@ -105,158 +116,104 @@ body {
     margin: 20px 0;
 }
 
-.hero-section .hero .search-bar {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.hero-section .hero .search-bar input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-    flex: 1;
-}
-
-.hero-section .hero .search-bar {
-    display: flex;
-    align-items: center;
-    border-radius: 50px; /* Membuat search bar lebih oval */
-    overflow: hidden;
-}
-
-.hero-section .hero .search-bar input {
-    padding: 10px 20px;
-    border: 1px solid #ccc;
-    border-right: none;
-    border-radius: 50px 0 0 50px; /* Menyambungkan input dengan tombol */
-    flex: 1;
-    font-size: 16px;
-}
-
-.hero-section .hero .search-bar button {
-    padding: 10px 20px;
+.hero-section .hero .start-now button {
+    padding: 15px 30px;
     border: none;
     background-color: #3b82f6;
     color: white;
-    border-radius: 0 50px 50px 0; /* Membuat sudut tombol lebih oval */
+    border-radius: 5px; /* Membuat sudut tombol lebih oval */
     cursor: pointer;
     font-size: 16px;
 }
 
-.hero-section .hero .search-bar input:focus, 
-.hero-section .hero .search-bar button:focus {
-    outline: none;
-}
-
-
-/* Styling untuk section buku */
-/* Styling untuk section buku */
-.book-section {
-    padding: 20px;
-    background-color: #f7f7f7;
-}
-
-/* Styling untuk filter (dropdown dan judul) */
-.filter {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    gap: 38px;
-}
-
-.filter select {
-    padding: 8px;
-    font-size: 14px;
-    color: #5533FF;
-}
-
-.filter h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-left: 0;
-}
-
-/* Membuat jarak antara filter dan daftar buku */
-.books-container {
-    margin-top: 20px;
-}
-
-/* Styling untuk daftar buku */
-.buku {
-    margin-left: 150px;
-}
-.books {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-}
-
-/* Styling untuk setiap buku */
-.book {
-    /* background-color: #fff; */
-    text-align: center;
-    padding: 15x;
-    /* border-radius: 10px; */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+/* About Us Section */
+.about-us {
     /* display: flex; */
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    border: 1px solid #ccc;
-
+    /* align-items: center; */
+    padding: 20px 100px 100px 100px;
+    background-color: #f5f5f5;
 }
 
-.book img {
-    width: 117px; /* Mengubah lebar gambar menjadi 117px */
-    height: 175px; /* Mengubah tinggi gambar menjadi 175px */
-    object-fit: cover;
+.about-us h2 {
+    font-size: 32px;
+    color: #4475F2;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-bottom: 20px;
 }
 
-.book p {
-    margin: 10px 0 5px;
-    font-size: 16px;
-    font-weight: bold;
+.about-us p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 100%;
 }
 
-.book .author {
+.about-us .about-us-content {
+    max-width: 100%;
+}
+
+
+/* features*/
+.features {
+    /* text-align: center; */
+    padding: 30px 100px 30px 100px;
+}
+
+.features h2 {
+    /* font-size: 32px; */
+    color: #4475F2;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-bottom: 30px;
+}
+
+.features li {
+    font-size: 30px;
+    margin-bottom: 100px;
+
+}
+.features-title h2{
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 150px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    /* flex-wrap: wrap; */
+}
+
+.feature-item {
+    /* background: #fff; */
+    /* border-radius: 10px; */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    /* padding: 10px; */
+    max-width: 200px;
+    text-align: center;
+}
+
+/* .feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+} */
+
+.feature-item h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
     font-size: 14px;
     color: #666;
+    line-height: 1.6;
 }
 
-
-
-
-
-
-/* Styling untuk tombol Show More */
-.show-more {
-    text-align: center;
-    margin-top: 30px;
-    font-weight: bold;
-}
-
-.show-more a {
-    display: inline-block; /* Supaya mirip tombol */
-    background-color: #3b82f6;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    text-decoration: none; /* Hilangkan garis bawah */
-    transition: background-color 0.3s;
-}
-
-.show-more a:hover {
-    background-color: #2563eb;
-}
-
-
-
-
+/* footer */
 .footer {
     display: flex;
-    /* justify-content: space-between; */
     padding: 35px;
     background-color: #fff;
     border: 1px solid #000;
@@ -271,11 +228,13 @@ body {
     padding-right: 150px;
     border-right: 1px solid #000;
 }
+
 .gbrinfo{
     width: 100px;
     width: 100px;
     padding-bottom: 50px;
 }
+
 .phone-info {
     display: flex;
     align-items: center;  /* Menyusun gambar dan teks sejajar secara vertikal */
@@ -308,7 +267,6 @@ body {
     width: 20px; 
     height: 20px;
 }
-
 
 /* form */
 .contact-form {
@@ -381,8 +339,7 @@ body {
     color: #00bfff; /* Warna biru muda untuk ukuran */
 }
 
-
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .hero {
         flex-direction: column;
         text-align: center;
@@ -400,110 +357,106 @@ body {
     .footer .contact-form {
         max-width: 100%;
     }
-}
+} */
 
 /* Untuk layar kecil (max-width: 768px) */
-@media (max-width: 768px) {
-    /* Hero Section */
-    .hero-section .hero {
+/* @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header .user-menu {
+        align-self: flex-end;
+    }
+
+    .hero {
         flex-direction: column;
         text-align: center;
         padding: 30px 20px;
     }
-    .hero-section .hero .text {
+
+    .hero .text {
         max-width: 100%;
     }
-    .hero-section .hero .search-bar {
+
+    .hero .search-bar {
         flex-direction: column;
-        width: 100%;
-        margin-top: 20px;
-    }
-    .hero-section .hero .search-bar input {
-        border-radius: 5px;
-        padding: 10px;
-        width: 100%;
-        margin-bottom: 10px; /* Menambah jarak bawah */
-    }
-    .hero-section .hero .search-bar button {
-        border-radius: 5px;
-        padding: 10px;
-        width: 100%;
     }
 
-    /* Books Section */
-    .book-section .books {
+    .hero .search-bar input {
+        border-radius: 5px;
+    }
+
+    .hero .search-bar button {
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .hero .books {
         justify-content: center;
         gap: 10px;
         flex-wrap: wrap;
     }
 
-    .book-section .book {
-        width: 100%;
-        text-align: center;
+    .book-section .books {
+        justify-content: center;
     }
 
-    /* Footer */
     .footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
         padding: 30px 20px;
     }
+
+    .footer .contact-form {
+        max-width: 100%;
+    }
+
     .footer .contact-info {
         align-items: center;
-        margin-bottom: 30px;
     }
-    .footer .contact-form {
-        width: 100%;
-    }
-
-    /* Navbar */
-    .hero-section nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .hero-section nav a {
-        padding: 8px;
-    }
-}
+} */
 
 /* Untuk layar sangat kecil (max-width: 480px) */
-@media (max-width: 480px) {
-    .hero-section .hero h1 {
-        font-size: 28px;  /* Mengurangi ukuran font h1 */
+/* @media (max-width: 480px) {
+    header {
+        padding: 20px;
     }
-    .hero-section .hero p {
-        font-size: 14px;
+
+    .hero h1 {
+        font-size: 32px;
     }
-    .hero-section .hero .search-bar input {
-        font-size: 14px;
+
+    .hero p {
+        font-size: 16px;
     }
-    .hero-section .hero .search-bar button {
+
+    .hero .search-bar input {
         font-size: 14px;
     }
 
-    /* Books Section */
-    .book-section .book img {
-        width: 100px;
-        height: 140px;
-    }
-
-    /* Footer */
-    .footer .contact-info {
-        margin-right: 0;
-        padding-right: 0;
-        border-right: none;
-    }
-
-    /* Form Adjustments */
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 14px;
-        padding: 10px;
-    }
-    .contact-form button {
-        padding: 10px;
+    .hero .search-bar button {
         font-size: 14px;
     }
-}
 
+    .hero .books img {
+        width: 120px;
+        height: 160px;
+    }
+
+    .book-section .books .book {
+        width: 120px;
+    }
+
+    .footer .contact-form h2 {
+        font-size: 20px;
+    }
+} */

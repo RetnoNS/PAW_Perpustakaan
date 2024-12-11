@@ -8,10 +8,9 @@ body {
 }
 
 /* Hero Section Styling */
-.hero-section {
-    /* position: relative; */
+/* .hero-section {
     padding: 30px 100px 100px;
-}
+} */
 
 .hero-section .bgblue {
     position: absolute;
@@ -35,7 +34,7 @@ body {
     align-items: center;
     /* margin-bottom: 50px;
     margin-top: 30px; */
-    margin : 30px 100px
+    margin : 25px 100px
 }
 
 .top-bar .logo {
