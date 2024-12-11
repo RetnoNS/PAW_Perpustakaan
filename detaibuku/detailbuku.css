@@ -75,182 +75,65 @@ body {
     color: #5533FF;
 }
 
-/* Hero Content */
-.hero-section .hero {
-    font-family: 'Plus Jakarta sans';
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.hero-section .hero .text {
-    max-width: 50%;
-}
-
-.hero-section .hero h1 {
-    font-size: 48px;
-    color: #000;
-    margin-bottom: 20px;
-}
-
-.hero-section .hero h1 span {
-    color: #3b82f6;
-    text-decoration: underline;
-}
-
-.hero-section .hero p {
-    font-size: 18px;
-    color: #666;
-    margin: 20px 0;
-}
-
-.hero-section .hero .search-bar {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.hero-section .hero .search-bar input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-    flex: 1;
-}
-
-.hero-section .hero .search-bar {
-    display: flex;
-    align-items: center;
-    border-radius: 50px; /* Membuat search bar lebih oval */
-    overflow: hidden;
-}
-
-.hero-section .hero .search-bar input {
-    padding: 10px 20px;
-    border: 1px solid #ccc;
-    border-right: none;
-    border-radius: 50px 0 0 50px; /* Menyambungkan input dengan tombol */
-    flex: 1;
-    font-size: 16px;
-}
-
-.hero-section .hero .search-bar button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #3b82f6;
-    color: white;
-    border-radius: 0 50px 50px 0; /* Membuat sudut tombol lebih oval */
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.hero-section .hero .search-bar input:focus, 
-.hero-section .hero .search-bar button:focus {
-    outline: none;
-}
-
-
-/* Styling untuk section buku */
-/* Styling untuk section buku */
-.book-section {
-    padding: 20px;
+.container {
+    padding: 100px;
     background-color: #f7f7f7;
+    display: flex; /* Menggunakan Flexbox untuk layout horizontal */
+    /* align-items: center; Menyelaraskan item secara vertikal */
+    gap: 20px; /* Jarak antara gambar dan teks */
 }
 
-/* Styling untuk filter (dropdown dan judul) */
-.filter {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    gap: 38px;
+.sinopsis-buku {
+    margin-left: 100px;
+}
+.cover img{
+    /* width: ; */
+    height: 500px;
 }
 
-.filter select {
-    padding: 8px;
-    font-size: 14px;
-    color: #5533FF;
+.judul{
+    padding-bottom: 30px;
 }
 
-.filter h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-left: 0;
+.judul p,h2{
+    margin: 5px;
 }
 
-/* Membuat jarak antara filter dan daftar buku */
-.books-container {
-    margin-top: 20px;
+.judul h2 {
+    font-size: 32px;
 }
 
-/* Styling untuk daftar buku */
-.buku {
-    margin-left: 150px;
-}
-.books {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
+.deskripsi{
+    margin-bottom: 30px;
 }
 
-/* Styling untuk setiap buku */
-.book {
-    /* background-color: #fff; */
-    text-align: center;
-    padding: 15x;
-    /* border-radius: 10px; */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    /* display: flex; */
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    border: 1px solid #ccc;
-
+.deskripsi h3,p{
+    margin: 7px;
 }
 
-.book img {
-    width: 117px; /* Mengubah lebar gambar menjadi 117px */
-    height: 175px; /* Mengubah tinggi gambar menjadi 175px */
-    object-fit: cover;
+.sinopsis{
+    margin-bottom: 30px;
 }
 
-.book p {
-    margin: 10px 0 5px;
+.sinopsis h3,p{
+    margin: 7px;
+}
+
+.pinjam button{
+    padding: 10px 15px;
+    border: none;
+    background-color: white;
+    color: #3b82f6;
+    border-radius: 50px;
+    border: 1px solid #3b82f6;
+    cursor: pointer;
     font-size: 16px;
-    font-weight: bold;
 }
 
-.book .author {
-    font-size: 14px;
-    color: #666;
-}
-
-
-
-
-
-
-/* Styling untuk tombol Show More */
-.show-more {
-    text-align: center;
-    margin-top: 30px;
-    font-weight: bold;
-}
-
-.show-more a {
-    display: inline-block; /* Supaya mirip tombol */
+.pinjam button:hover{
     background-color: #3b82f6;
     color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    text-decoration: none; /* Hilangkan garis bawah */
-    transition: background-color 0.3s;
 }
-
-.show-more a:hover {
-    background-color: #2563eb;
-}
-
-
 
 
 .footer {

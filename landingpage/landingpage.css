@@ -224,6 +224,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    padding-left: 50px;
     margin-right: 150px;
     padding-right: 150px;
     border-right: 1px solid #000;
