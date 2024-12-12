@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinjam Buku</title>
+    <link rel="stylesheet" href="pinjambuku.css">
+</head>
+<body>
+
+    <section class="pinjambuku">
+        <h2>Pinjam Buku</h2>
+    </section>
+
+    <section class="pinjam-container">
+        <div class="pinjam">
+            <p class="text"><span>Home </span> / Pinjam Buku</p>
+                <h3>Pinjam Buku</h3>
+            <p>Input your full name, username, phone number and password.</p>
+            <div class="form-container">
+                <div class="left">
+                    <label for="name">Name</label>
+                    <input type="name" id="name" placeholder="Masukkan Nama" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Masukkan Email" required>
+
+                    <label for="phonenumber">Phone Number</label>
+                    <input type="phonenumber" id="phonenumber" placeholder="Masukkan Nomor telpon" required>
+                
+                    <label for="judulauthor">Judul Buku - Author</label>
+                    <input type="judulauthor" id="judulauthor" placeholder="Masukkan Judul Buku " required>
+
+                    <label for="tanggalpinjam">Tanggal Peminjaman</label>
+                    <input type="tanggalpinjam" id="tanggalpinjam" placeholder="Masukkan Tanggal Peminjaman" required>
+
+                </div>
+
+                <div class="right">
+                    <label for="tanggalkembali">Tanggal Pengembalian</label>
+                    <input type="tanggalkembali" id="tanggalkembali" placeholder="Masukkan Tanggal Pengembalian" required>
+
+                    <label for="durasi">Durasi Peminjaman</label>
+                    <input type="durasi" id="durasi" placeholder="Masukkan Durasi Peminjaman" required>
+                </div>
+            </div>
+        </div> <br>
+        <button type="btnpinjam">Submit</button>
+    </section>
+
+    <footer>
+        &copy; 2024 Perpustakaan Online. All rights reserved.
+    </footer>
+
+    <script src="pinjambuku.js"></script>
+</body>
+</html>

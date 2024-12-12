@@ -14,15 +14,15 @@ body {
     margin: 0;
 }
 
-.logo-container {
+.pinjambuku {
     margin: 30px 100px 30px 100px;
+    background-color: #4475F2;
+    color: white;
+    padding: 20px;
+    border-radius: 35px;
 }
 
-.logo-container img {
-    width: 80px;
-}
-
-.register-container {
+.pinjam-container {
     background-color: #ffffff;
     padding: 40px;
     border-radius: 5px; 
@@ -42,29 +42,29 @@ body {
     flex-wrap: wrap;
 }
 
-.register .text{
+.pinjam .text{
     padding-top: 5px;
 }
 
-.register-container span{
+.pinjam-container span{
     padding-top: 20px;
     color: #4737FF;
 }
 
-.register-container h3 {
+.pinjam-container h3 {
     /* font-size: 24px; */
     margin-bottom: 10px;
     color: #333;
 
 }
 
-.register-container p {
+.pinjam-container p {
     font-size: 14px;
     color: #666;
     margin-bottom: 20px;
 }
 
-.register-container input {
+.pinjam-container input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -73,7 +73,7 @@ body {
     font-size: 14px;
 }
 
-.register-container button {
+.pinjam-container button {
     width: 100%;
     padding: 10px;
     background-color: #4475F2;
@@ -85,7 +85,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.register-container button:hover {
+.pinjam-container button:hover {
     background-color: #0056b3;
 }
 
