@@ -402,7 +402,37 @@ button.borrow:hover {
     height: 20px;
 }
 
+textarea {
+    width: 100%; /* Menggunakan lebar penuh */
+    max-width: 500px; /* Batas maksimum lebar */
+    min-height: 100px; /* Tinggi minimum */
+    padding: 10px; /* Ruang dalam */
+    border: 1px solid #ccc; /* Border abu-abu */
+    border-radius: 5px; /* Sudut membulat */
+    font-size: 16px; /* Ukuran font */
+    resize: vertical; /* Hanya bisa diubah tinggi */
+    box-sizing: border-box; /* Hitung padding dalam lebar */
+}
 
+/* Style untuk tombol */
+.submit-button {
+    margin-top: 10px;
+    width: 100%; /* Lebar penuh */
+    max-width: 200px; /* Batas maksimum lebar */
+    padding: 10px 20px; /* Ruang dalam */
+    font-size: 16px; /* Ukuran font */
+    color: #fff; /* Warna teks */
+    background-color: #007BFF; /* Warna biru */
+    border: none; /* Tanpa border */
+    border-radius: 5px; /* Sudut membulat */
+    cursor: pointer; /* Ubah kursor jadi pointer */
+    transition: background-color 0.3s ease; /* Efek transisi */
+}
+
+/* Hover efek untuk tombol */
+.submit-button:hover {
+    background-color: #0056b3; /* Biru lebih gelap */
+}
 /* form */
 .contact-form {
     display: flex;
@@ -475,6 +505,7 @@ button.borrow:hover {
 }
 
 
+
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -485,6 +516,15 @@ button.borrow:hover {
     }
     .hero .books {
         justify-content: center;
+    }
+
+    textarea {
+        min-height: 80px; /* Tinggi lebih kecil */
+        font-size: 12px; /* Font lebih kecil */
+    }
+    .submit-button {
+        font-size: 12px; /* Font lebih kecil */
+        padding: 8px 16px; /* Padding lebih kecil */
     }
     .footer {
         flex-direction: column;
@@ -523,6 +563,14 @@ button.borrow:hover {
         width: 100%;
     }
 
+    textarea {
+        min-height: 80px; /* Tinggi lebih kecil */
+        font-size: 12px; /* Font lebih kecil */
+    }
+    .submit-button {
+        font-size: 12px; /* Font lebih kecil */
+        padding: 8px 16px; /* Padding lebih kecil */
+    }
     /* Books Section */
     .book-section .books {
         justify-content: center;
@@ -535,6 +583,14 @@ button.borrow:hover {
         text-align: center;
     }
 
+    textarea {
+        min-height: 80px; /* Tinggi lebih kecil */
+        font-size: 12px; /* Font lebih kecil */
+    }
+    .submit-button {
+        font-size: 12px; /* Font lebih kecil */
+        padding: 8px 16px; /* Padding lebih kecil */
+    }
     /* Footer */
     .footer {
         flex-direction: column;
@@ -560,6 +616,7 @@ button.borrow:hover {
     }
 }
 
+
 /* Untuk layar sangat kecil (max-width: 480px) */
 @media (max-width: 480px) {
     .hero-section .hero h1 {
@@ -581,6 +638,14 @@ button.borrow:hover {
         height: 140px;
     }
 
+    textarea {
+        max-width: 100%; /* Lebar penuh */
+        font-size: 14px; /* Font lebih kecil */
+    }
+    .submit-button {
+        max-width: 100%; /* Lebar penuh */
+        font-size: 14px; /* Font lebih kecil */
+    }
     /* Footer */
     .footer .contact-info {
         margin-right: 0;

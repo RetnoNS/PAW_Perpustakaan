@@ -10,3 +10,4 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         alert('Please fill out all fields.');
     }
 });
+
