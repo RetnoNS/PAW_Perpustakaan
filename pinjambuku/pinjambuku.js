@@ -7,36 +7,22 @@ const tanggalPinjamInput = document.getElementById("tanggalpinjam");
 const tanggalKembaliInput = document.getElementById("tanggalkembali");
 const durasiInput = document.getElementById("durasi");
 const submitButton = document.getElementById("submitBtn");
-const modal = document.getElementById("captcha-modal");
-const closeButton = document.querySelector(".close-button");
-const slider = document.getElementById("captcha-slider");
-const canvas = document.querySelector(".captcha-canvas");
-const ctx = canvas.getContext("2d");
 
-submitButton.addEventListener("click", () => {
-    modal.style.display = "block"; // Tampilkan modal
-    drawPuzzlePiece(0); // Mulai dengan menggambar puzzle
-});
-
-// Event: Tutup modal saat tombol Close diklik
-closeButton.addEventListener("click", () => {
-    modal.style.display = "none"; // Sembunyikan modal
-});
-
-// Fungsi untuk menggambar puzzle di canvas
-function drawPuzzlePiece(x) {
-    const pieceWidth = 50; // Lebar puzzle
-    const pieceHeight = 50; // Tinggi puzzle
-    ctx.clearRect(0, 0, canvas.width, canvas.height); // Bersihkan canvas
-    ctx.fillStyle = "rgba(0, 0, 0, 0.5)"; // Warna puzzle
-    ctx.fillRect(x, 50, pieceWidth, pieceHeight); // Gambar puzzle
-}
-
-// Event: Geser slider untuk memindahkan puzzle
-slider.addEventListener("input", (event) => {
-    const value = event.target.value; // Ambil nilai slider
-    drawPuzzlePiece((canvas.width * value) / 100); // Update posisi puzzle
-});
+const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    }
+  });
+  Toast.fire({
+    icon: "success",
+    title: "Signed in successfully"
+  });
 
 // Menambahkan event listener ke tombol "Pinjam Buku"
 pinjamButton.addEventListener("click", (event) => {

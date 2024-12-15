@@ -17,3 +17,9 @@ cancelButton.addEventListener("click", () => {
 acceptButton.addEventListener("click", () => {
   alert("You accepted the Terms and Conditions.");
 });
+
+document.getElementById("acceptButton").disabled = false;
+
+document.getElementById("acceptButton").addEventListener("click", function () {
+  window.location.href = "/pinjambuku/pinjambuku.html";
+});
