@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/beforelogin.css" />
+    <link rel="stylesheet" href="css/afterlogin.css" />
+
 </head>
 
 <body>
@@ -23,10 +24,15 @@
         <nav>
             <a href="#katalog">Katalog Buku</a>
             <a href="/pinjambuku/pinjambuku.html">Pinjam Buku</a>
+            <a href="/wishlistbuku/wishlistbuku.html">Wishlist Buku</a>
             <a href="#contact-us">Contact Us</a>
         </nav>
         <div class="user-menu">
-            <a href="{{ route('login') }}" class="login-link">Login</a>
+            <select id="userMenu" onchange="navigateToPage()">
+                <option value="" disabled selected>Yassar</option>
+                <option value="#">Profil</option>
+                <option value="/logout">Logout</option>
+            </select>
         </div>
     </header>
 
@@ -49,7 +55,7 @@
         </div>
     </section>
 
-    <section class="book-section" id="katalog">
+    <section class="book-section">
         <div class="filter">
             <select>
                 <option value="genre">Genre Buku </option>
@@ -64,7 +70,7 @@
             <h2>Buku</h2>
         </div>
         <!-- <h2>Buku</h2> -->
-        <div class="buku">
+        <div class="buku" id="katalog">
             <div class="books">
                 <!-- Repeat book div as necessary -->
                 <div class="book">
@@ -148,9 +154,6 @@
                         <button class="borrow">Add to pinjam buku</button>
                     </div>
                 </div>
-                <!-- <div class="book">
-                    <p>Show More Books</p>
-                </div> -->
                 <div class="show-more">
                     <a href="#" class="show-more-link">Show More Books</a>
                 </div>
@@ -183,7 +186,7 @@
             <input type="text" placeholder="Enter your name" />
             <input type="email" placeholder="Enter your email" />
             <textarea placeholder="Type your message here"></textarea>
-            <button>Submit</button>
+            <button class="submit-button">Submit</button>
         </div>
     </footer>
 
@@ -191,7 +194,10 @@
         <p>&copy; 2024 Perpustakaan Online. All rights reserved.</p>
     </div>
 
-    <script src="js/beforelogin.js"></script>
+
+    <script src="js/afterlogin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
