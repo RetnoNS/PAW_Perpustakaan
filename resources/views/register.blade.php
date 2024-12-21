@@ -17,34 +17,38 @@
             <p class="text"><span>Home </span> / Register</p>
                 <h3>Register</h3>
             <p>Input your full name, username, phone number and password.</p>
+            <form method="POST" action="register" style="margin: 0;">
+                @csrf
             <div class="form-container">
                 <div class="left">
                     <label for="fullname">Full Name</label>
-                    <input type="fullname" id="fullname" placeholder="Enter your Full Name" required>
+                    <input type="fullname" id="fullname" name="fullname" required placeholder="Enter your Full Name" required>
 
                     <label for="username">Username</label>
-                    <input type="username" id="username" placeholder="Enter your Username" required>
+                    <input type="username" id="username" name="username" required placeholder="Enter your Username" required>
 
                     <label for="phonenumber">Phone Number</label>
-                    <input type="phonenumber" id="phonenumber" placeholder="Enter your Phone Number" required>
+                    <input type="phonenumber" id="phonenumber" name="phone_number" required placeholder="Enter your Phone Number" required>
 
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter your Email" required>
+                    <input type="email" id="email" name="email" required placeholder="Enter your Email" required>
                 </div>
 
                 <div class="right">
                     <label for="address">Address</label>
-                    <input type="address" id="address" placeholder="Enter your Address" required>
+                    <input type="address" id="address" name="address" required placeholder="Enter your Address" required>
 
                     <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter your Password" required>
+                    <input type="password" id="password" name="password" required placeholder="Enter your Password" required>
 
                     <label for="confirmpassword">Confirm Password</label>
-                    <input type="password" id="confirmpassword" placeholder="Enter your Password Again" required>
+                    <input type="password" id="confirmpassword" name="password_confirmation" required placeholder="Enter your Password Again" required>
                 </div>
             </div>
-        </div> <br>
-        <button type="regist"> Register</button>
+        </div>
+        <br>
+        <button type="submit"> Register</button>
+    </form>
     </section>
 
     <footer>

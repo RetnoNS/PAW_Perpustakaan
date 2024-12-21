@@ -22,7 +22,11 @@
             <input type="password" id="password" name="password" placeholder="Password" required>
             <button type="submit">Login</button>
         </form>
-    </div>
+        @if (Session::has('error'))
+            <div class="alert alert-danger" style="color: red; margin-top: 20px; text-align: center;">
+                {{ Session::get('error') }}
+            </div>
+        @endif
     @if ($errors->any())
         <div class="alert alert-danger col-md-6">
             <ul>
@@ -32,8 +36,9 @@
             </ul>
         </div>
     @endif
+    </div>
     <div class="bawah">
-        <p class="regis">Don't have an account? <a href="/register/register.html">Create one!</a></p>
+        <p class="regis">Don't have an account? <a href="{{ route('register') }}">Create one!</a></p>
         <footer>
             &copy; 2024 Perpustakaan Online. All rights reserved.
         </footer>
