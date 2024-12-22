@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\DashboardController;
@@ -36,7 +36,7 @@ Route::get('/profile', function () {
 Route::middleware('auth')->group(function () {
     Route::get('email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
         $request->fulfill();
-        return redirect('/profile');
+        return redirect('index');
     })->middleware(['auth', 'signed'])->name('verification.verify');
     Route::get('/email/verify', function () {
         return view('auth.verify-email');

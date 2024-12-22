@@ -8,12 +8,27 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 class AuthController extends Controller
 {
     function login(){
         return view('login');
     }
+
+    public function verified(EmailVerificationRequest $request)
+    {
+        $user = $request->user();
+
+        // Memeriksa apakah email_verified_at sudah terisi dan mengubah status menjadi 'active'
+        if ($user->email_verified_at !== null && $user->status === 'inactive') {
+            $user->update(['status' => 'active']);
+        }
+
+        // Redirect ke halaman setelah verifikasi
+        return redirect()->route('index'); // Ganti dengan route yang sesuai
+    }
+
     function autentikasi(Request $request){
         $credentials = $request->validate([
             'email' => ['required', 'email'],
@@ -22,6 +37,14 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
+
+            $user = Auth::user();
+
+            // Memeriksa jika email sudah diverifikasi dan status masih 'inactive', ubah status menjadi 'active'
+            if ($user->email_verified_at !== null && $user->status === 'inactive') {
+                $user->update(['status' => 'active']);
+            }
+
 
             // Mengarahkan berdasarkan role
             $role = Auth::user()->role_id;
@@ -72,30 +95,6 @@ class AuthController extends Controller
 
         return redirect('/profile');
     }
-
-    // Tangani proses registrasi
-    // function registrasi(Request $request) {
-    //     $validatedData = $request->validate([
-    //         'username' => 'required|string|max:255',
-    //         'email' => 'required|string|email|max:255|unique:users',
-    //         'password' => 'required|string|min:8|confirmed',
-    //         'fullname' => 'required|string|max:255',
-    //         'phone_number' => 'required|string|max:15',
-    //         'address' => 'required|string|max:255',
-    //     ]);
-
-    //     User::create([
-    //         'username' => $validatedData['username'],
-    //         'email' => $validatedData['email'],
-    //         'password' => Hash::make($validatedData['password']),
-    //         'fullname' => $validatedData['fullname'],
-    //         'phone_number' => $validatedData['phone_number'],
-    //         'address' => $validatedData['address'],
-    //         'status' => 'inactive',
-    //         'role_id' => 2, // Default sebagai user
-    //     ]);
-    //     return redirect('login');
-    // }
 
     public function logout(Request $request) {
         Auth::logout();
