@@ -6,17 +6,6 @@
       0 => 'Laravel\\Sail\\SailServiceProvider',
     ),
   ),
-  'laravel/socialite' => 
-  array (
-    'aliases' => 
-    array (
-      'Socialite' => 'Laravel\\Socialite\\Facades\\Socialite',
-    ),
-    'providers' => 
-    array (
-      0 => 'Laravel\\Socialite\\SocialiteServiceProvider',
-    ),
-  ),
   'laravel/tinker' => 
   array (
     'providers' => 
@@ -43,6 +32,17 @@
     'providers' => 
     array (
       0 => 'Termwind\\Laravel\\TermwindServiceProvider',
+    ),
+  ),
+  'spatie/laravel-ignition' => 
+  array (
+    'aliases' => 
+    array (
+      'Flare' => 'Spatie\\LaravelIgnition\\Facades\\Flare',
+    ),
+    'providers' => 
+    array (
+      0 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
     ),
   ),
 );
