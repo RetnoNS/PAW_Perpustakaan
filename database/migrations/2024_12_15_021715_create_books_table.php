@@ -21,6 +21,7 @@ return new class extends Migration
             $table->bigInteger('total_copies');
             $table->text('synopsis');
             $table->double('price');
+            $table->string('book_image');
             $table->timestamps();
         });
     }
