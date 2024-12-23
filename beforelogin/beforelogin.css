@@ -29,61 +29,15 @@ body {
 }
 
 /* Top Bar (Header dalam Hero Section) */
-.top-bar {
+.navbar {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    /* margin-bottom: 50px;
-    margin-top: 30px; */
-    margin : 30px 100px
-}
-
-.top-bar .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.top-bar .logo img {
-    height: 50px;
-    width: auto;
-}
-
-.top-bar nav {
-    display: flex;
-    gap: 30px;
-}
-
-.top-bar nav a {
-    font-size: 18px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.top-bar nav a:hover {
-    background-color: #3b82f6;
+    padding: 10px 20px;
+    background-color: #4CAF50;
     color: white;
-}
-
-.top-bar .user-menu {
-    padding: 10px 15px;
-    border-radius: 5px;
-    color: black;
-    background-color: white;
-}
-
-.login-link {
-    text-decoration: none;
-    color: inherit;
-    font-size: 16px;
-    font-weight: normal;
-}
-.login-link:hover {
-    color: #3b82f6; /* Warna saat di-hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 /* Hero Content */
@@ -188,11 +142,7 @@ body {
 }
 
 /* Membuat jarak antara filter dan daftar buku */
-.books-container {
-    margin-top: 20px;
-}
-
-/* Styling untuk daftar buku */
+/* Kontainer utama buku */
 .buku {
     margin: 20px auto;
     display: flex;
@@ -318,24 +268,6 @@ button.borrow:hover {
     background-color: #0056b3;
 }
 
-/* Responsif */
-@media (max-width: 768px) {
-    .books {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    }
-
-    .book {
-        width: 120px;
-    }
-}
-
-
-
-
-
-
-
-
 /* Styling untuk tombol Show More */
 .show-more {
     text-align: center;
@@ -343,19 +275,20 @@ button.borrow:hover {
     font-weight: bold;
 }
 
-.show-more p {
+.show-more a {
+    display: inline-block; /* Supaya mirip tombol */
     background-color: #3b82f6;
     color: white;
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
+    text-decoration: none; /* Hilangkan garis bawah */
     transition: background-color 0.3s;
 }
 
-.show-more p:hover {
+.show-more a:hover {
     background-color: #2563eb;
 }
-
 
 .footer {
     display: flex;
@@ -413,7 +346,37 @@ button.borrow:hover {
     height: 20px;
 }
 
+textarea {
+    width: 100%; /* Menggunakan lebar penuh */
+    max-width: 500px; /* Batas maksimum lebar */
+    min-height: 100px; /* Tinggi minimum */
+    padding: 10px; /* Ruang dalam */
+    border: 1px solid #ccc; /* Border abu-abu */
+    border-radius: 5px; /* Sudut membulat */
+    font-size: 16px; /* Ukuran font */
+    resize: vertical; /* Hanya bisa diubah tinggi */
+    box-sizing: border-box; /* Hitung padding dalam lebar */
+}
 
+/* Style untuk tombol */
+.submit-button {
+    margin-top: 10px;
+    width: 100%; /* Lebar penuh */
+    max-width: 200px; /* Batas maksimum lebar */
+    padding: 10px 20px; /* Ruang dalam */
+    font-size: 16px; /* Ukuran font */
+    color: #fff; /* Warna teks */
+    background-color: #007BFF; /* Warna biru */
+    border: none; /* Tanpa border */
+    border-radius: 5px; /* Sudut membulat */
+    cursor: pointer; /* Ubah kursor jadi pointer */
+    transition: background-color 0.3s ease; /* Efek transisi */
+}
+
+/* Hover efek untuk tombol */
+.submit-button:hover {
+    background-color: #0056b3; /* Biru lebih gelap */
+}
 /* form */
 .contact-form {
     display: flex;
@@ -485,124 +448,30 @@ button.borrow:hover {
     color: #00bfff; /* Warna biru muda untuk ukuran */
 }
 
+
+
 @media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero .text {
-        max-width: 100%;
-    }
-    .hero .books {
-        justify-content: center;
-    }
-    .footer {
-        flex-direction: column;
-        align-items: center;
-    }
-    .footer .contact-form {
-        max-width: 100%;
-    }
-}
-
-/* Untuk layar kecil (max-width: 768px) */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    header nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    header .user-menu {
-        align-self: flex-end;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-    }
-
-    .hero .text {
-        max-width: 100%;
-    }
-
-    .hero .search-bar {
-        flex-direction: column;
-    }
-
-    .hero .search-bar input {
-        border-radius: 5px;
-    }
-
-    .hero .search-bar button {
-        border-radius: 5px;
-        margin-top: 10px;
-    }
-
-    .hero .books {
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-
-    .book-section .books {
-        justify-content: center;
-    }
-
-    .footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 30px 20px;
-    }
-
-    .footer .contact-form {
-        max-width: 100%;
-    }
-
-    .footer .contact-info {
-        align-items: center;
-    }
-}
-
-/* Untuk layar sangat kecil (max-width: 480px) */
-@media (max-width: 480px) {
-    header {
+    .hero-section {
         padding: 20px;
     }
 
-    .hero h1 {
-        font-size: 32px;
+    .hero-section .hero {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .hero p {
-        font-size: 16px;
+    .hero-section .hero .text {
+        max-width: 100%;
     }
 
-    .hero .search-bar input {
-        font-size: 14px;
+    .books {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
 
-    .hero .search-bar button {
-        font-size: 14px;
-    }
-
-    .hero .books img {
-        width: 120px;
-        height: 160px;
-    }
-
-    .book-section .books .book {
-        width: 120px;
-    }
-
-    .footer .contact-form h2 {
-        font-size: 20px;
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
     }
 }

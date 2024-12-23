@@ -7,3 +7,4 @@ function navigateToPage() {
       window.location.href = selectedValue; // Redirect ke halaman yang dipilih
     }
   }
+

@@ -29,51 +29,15 @@ body {
 }
 
 /* Top Bar (Header dalam Hero Section) */
-.top-bar {
+.navbar {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    /* margin-bottom: 50px;
-    margin-top: 30px; */
-    margin : 30px 100px
-}
-
-.top-bar .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.top-bar .logo img {
-    height: 50px;
-    width: auto;
-}
-
-.top-bar nav {
-    display: flex;
-    gap: 30px;
-}
-
-.top-bar nav a {
-    font-size: 18px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.top-bar nav a:hover {
-    background-color: #3b82f6;
+    padding: 10px 20px;
+    background-color: #4CAF50;
     color: white;
-}
-
-.top-bar .user-menu select {
-    padding: 10px 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    color: #5533FF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 /* Hero Content */
@@ -304,23 +268,6 @@ button.borrow:hover {
     background-color: #0056b3;
 }
 
-/* Responsif */
-@media (max-width: 768px) {
-    .books {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    }
-
-    .book {
-        width: 120px;
-    }
-}
-
-
-
-
-
-
-
 /* Styling untuk tombol Show More */
 .show-more {
     text-align: center;
@@ -342,9 +289,6 @@ button.borrow:hover {
 .show-more a:hover {
     background-color: #2563eb;
 }
-
-
-
 
 .footer {
     display: flex;
@@ -507,161 +451,27 @@ textarea {
 
 
 @media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero .text {
-        max-width: 100%;
-    }
-    .hero .books {
-        justify-content: center;
+    .hero-section {
+        padding: 20px;
     }
 
-    textarea {
-        min-height: 80px; /* Tinggi lebih kecil */
-        font-size: 12px; /* Font lebih kecil */
-    }
-    .submit-button {
-        font-size: 12px; /* Font lebih kecil */
-        padding: 8px 16px; /* Padding lebih kecil */
-    }
-    .footer {
-        flex-direction: column;
-        align-items: center;
-    }
-    .footer .contact-form {
-        max-width: 100%;
-    }
-}
-
-/* Untuk layar kecil (max-width: 768px) */
-@media (max-width: 768px) {
-    /* Hero Section */
     .hero-section .hero {
         flex-direction: column;
         text-align: center;
-        padding: 30px 20px;
     }
+
     .hero-section .hero .text {
         max-width: 100%;
     }
-    .hero-section .hero .search-bar {
-        flex-direction: column;
-        width: 100%;
-        margin-top: 20px;
-    }
-    .hero-section .hero .search-bar input {
-        border-radius: 5px;
-        padding: 10px;
-        width: 100%;
-        margin-bottom: 10px; /* Menambah jarak bawah */
-    }
-    .hero-section .hero .search-bar button {
-        border-radius: 5px;
-        padding: 10px;
-        width: 100%;
+
+    .books {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
 
-    textarea {
-        min-height: 80px; /* Tinggi lebih kecil */
-        font-size: 12px; /* Font lebih kecil */
-    }
-    .submit-button {
-        font-size: 12px; /* Font lebih kecil */
-        padding: 8px 16px; /* Padding lebih kecil */
-    }
-    /* Books Section */
-    .book-section .books {
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-
-    .book-section .book {
-        width: 100%;
-        text-align: center;
-    }
-
-    textarea {
-        min-height: 80px; /* Tinggi lebih kecil */
-        font-size: 12px; /* Font lebih kecil */
-    }
-    .submit-button {
-        font-size: 12px; /* Font lebih kecil */
-        padding: 8px 16px; /* Padding lebih kecil */
-    }
-    /* Footer */
     .footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 30px 20px;
-    }
-    .footer .contact-info {
-        align-items: center;
-        margin-bottom: 30px;
-    }
-    .footer .contact-form {
-        width: 100%;
-    }
-
-    /* Navbar */
-    .hero-section nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .hero-section nav a {
-        padding: 8px;
+        gap: 20px;
     }
 }
-
-
-/* Untuk layar sangat kecil (max-width: 480px) */
-@media (max-width: 480px) {
-    .hero-section .hero h1 {
-        font-size: 28px;  /* Mengurangi ukuran font h1 */
-    }
-    .hero-section .hero p {
-        font-size: 14px;
-    }
-    .hero-section .hero .search-bar input {
-        font-size: 14px;
-    }
-    .hero-section .hero .search-bar button {
-        font-size: 14px;
-    }
-
-    /* Books Section */
-    .book-section .book img {
-        width: 100px;
-        height: 140px;
-    }
-
-    textarea {
-        max-width: 100%; /* Lebar penuh */
-        font-size: 14px; /* Font lebih kecil */
-    }
-    .submit-button {
-        max-width: 100%; /* Lebar penuh */
-        font-size: 14px; /* Font lebih kecil */
-    }
-    /* Footer */
-    .footer .contact-info {
-        margin-right: 0;
-        padding-right: 0;
-        border-right: none;
-    }
-
-    /* Form Adjustments */
-    .contact-form input,
-    .contact-form textarea {
-        font-size: 14px;
-        padding: 10px;
-    }
-    .contact-form button {
-        padding: 10px;
-        font-size: 14px;
-    }
-}
-
