@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('bookings', function (Blueprint $table) {
-            $table->id();
-            $table->date('tanggal_peminjaman');
-            $table->timestamps();
+        Schema::table('bookings', function (Blueprint $table) {
+            $table->unsignedBigInteger('book_id')->after('id');
+            $table->foreign('book_id')->references('id')->on('books');
         });
     }
 
@@ -23,6 +22,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('bookings');
+        Schema::table('bookings', function (Blueprint $table) {
+            $table->dropForeign(['book_id']);
+            $table->dropColumn('book_id');
+        });
     }
 };

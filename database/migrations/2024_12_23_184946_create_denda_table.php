@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('bookings', function (Blueprint $table) {
+        Schema::create('denda', function (Blueprint $table) {
             $table->id();
-            $table->date('tanggal_peminjaman');
+            $table->enum('kategori', ['ringan', 'berat'])->default('ringan');
+            $table->decimal('jumlah_denda');
+            $table->enum('status', ['lunas', 'belum lunas'])->default('belum lunas');
             $table->timestamps();
         });
     }
@@ -23,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('bookings');
+        Schema::dropIfExists('denda');
     }
 };

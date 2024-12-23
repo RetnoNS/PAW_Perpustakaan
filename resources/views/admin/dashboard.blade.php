@@ -14,10 +14,18 @@
     <div class="sidebar">
         <h2>Hallo Admin</h2>
         <ul>
-            <li class="active"><a href="/admin/dashboard/dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-            <li><a href="/admin/user/user.html"><i class="fas fa-user"></i> Data User</a></li>
-            <li><a href="/admin/buku/buku.html"><i class="fas fa-book"></i> Data Buku</a></li>
-            <li><a href="/admin/transaksi/transaksi.html"><i class="fas fa-exchange-alt"></i> Transaksi</a></li>
+            <li class="active"><a href="{{ route('dashboard') }}"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="{{ route('dashboard.users') }}"><i class="fas fa-user"></i> Data User</a></li>
+            <li><a href="{{ route('dashboard.books') }}"><i class="fas fa-book"></i> Data Buku</a></li>
+            <li><a href="{{ route('dashboard.loans') }}"><i class="fas fa-exchange-alt"></i> Transaksi</a></li>
+            <li>
+                <form method="GET" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </form>
+            </li>
         </ul>
     </div>
 
@@ -25,17 +33,22 @@
     <div class="content">
         <h1>Ringkasan Admin</h1>
         <div class="stats">
-            <div class="stat">
-                <h2>30</h2>
+            <!-- Card for Total Books -->
+            <div class="stat" onclick="window.location='{{ route('dashboard.books') }}'">
+                <h2>{{ $totalBooks }}</h2>
                 <p>Buku</p>
             </div>
-            <div class="stat">
-                <h2>2</h2>
-                <p>Overdue</p>
+
+            <!-- Card for Late Returns -->
+            <div class="stat" onclick="window.location='{{ route('dashboard.loans') }}'">
+                <h2>{{ $lateReturns }}</h2>
+                <p>Terlambat</p>
             </div>
-            <div class="stat">
-                <h2>4</h2>
-                <p>In progress</p>
+
+            <!-- Card for Total Users -->
+            <div class="stat" onclick="window.location='{{ route('dashboard.users') }}'">
+                <h2>{{ $totalUsers }}</h2>
+                <p>User</p>
             </div>
         </div>
 

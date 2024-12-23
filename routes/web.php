@@ -17,7 +17,7 @@ Route::middleware('guest')->group(function () {
     Route::post('/register', [AuthController::class, 'createUser']);
 });
 
-Route::middleware('auth', 'verified')->group(function () {
+Route::middleware('auth')->group(function () {
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 
@@ -27,6 +27,14 @@ Route::middleware(['auth', 'verified' ,'user'])->group(function () {
 
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
+    Route::get('/dashboard/users', [DashboardController::class, 'users'])->name('dashboard.users');
+    Route::get('/dashboard/books', [DashboardController::class, 'books'])->name('dashboard.books');
+    Route::get('/dashboard/loans', [DashboardController::class, 'loans'])->name('dashboard.loans');
+
+    // Tambahan untuk fitur edit dan delete
+    Route::get('/dashboard/users/{user}/edit', [DashboardController::class, 'editUser'])->name('dashboard.users.edit');
+    Route::put('/dashboard/users/{user}', [DashboardController::class, 'updateUser'])->name('dashboard.users.update');
+    Route::delete('/dashboard/users/{user}', [DashboardController::class, 'deleteUser'])->name('dashboard.users.delete');
 });
 
 Route::get('/profile', function () {
