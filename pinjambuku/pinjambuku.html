@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="pinjambuku.js">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
-    <section class="pinjambuku">
+    <section class="pinjambuku" data-aos="fade-in">
         <h2>Pinjam Buku</h2>
     </section>
 
-    <section class="pinjam-container">
+    <section class="pinjam-container" data-aos="fade-up" data-aos-duration="3000ms">
         <div class="pinjam">
             <p class="text"><span>Home </span> / Pinjam Buku</p>
             <h3>Pinjam Buku</h3>
@@ -87,6 +88,10 @@
         termsCheckbox.addEventListener('change', function () {
             submitButton.disabled = !this.checked;
         });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 

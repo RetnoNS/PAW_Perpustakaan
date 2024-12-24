@@ -29,51 +29,15 @@ body {
 }
 
 /* Top Bar (Header dalam Hero Section) */
-.top-bar {
+.navbar {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    /* margin-bottom: 50px;
-    margin-top: 30px; */
-    margin : 30px 100px
-}
-
-.top-bar .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.top-bar .logo img {
-    height: 50px;
-    width: auto;
-}
-
-.top-bar nav {
-    display: flex;
-    gap: 30px;
-}
-
-.top-bar nav a {
-    font-size: 18px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.top-bar nav a:hover {
-    background-color: #3b82f6;
+    padding: 10px 20px;
+    background-color: #4CAF50;
     color: white;
-}
-
-.top-bar .user-menu {
-    padding: 10px 15px;
-    border-radius: 5px;
-    color: black;
-    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .login-link {
@@ -155,7 +119,6 @@ body {
 
 /* features*/
 .features {
-    /* text-align: center; */
     padding: 30px 100px 30px 100px;
 }
 
@@ -184,20 +147,28 @@ body {
     /* flex-wrap: wrap; */
 }
 
-.feature-item {
-    /* background: #fff; */
-    /* border-radius: 10px; */
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-    /* padding: 10px; */
-    max-width: 200px;
-    text-align: center;
+.features-container {
+    display: flex;
+    flex-wrap: wrap; /* Memungkinkan elemen pindah ke baris berikutnya jika ruang tidak cukup */
+    gap: 20px; /* Jarak antar elemen */
+    justify-content: center; /* Pusatkan elemen dalam container */
 }
 
-/* .feature-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
-} */
+.feature-item {
+    flex: 1 1 calc(33.33% - 20px); /* 3 kolom di desktop */
+    max-width: 300px; /* Lebar maksimum tiap elemen */
+    text-align: center;
+    padding: 20px; /* Jarak di dalam elemen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan untuk tampilan lebih menarik */
+    border-radius: 10px; /* Membuat sudut elemen membulat */
+    background-color: #ffffff; /* Warna background elemen */
+}
+
+.feature-item img {
+    width: 80px; /* Ukuran gambar */
+    height: 80px;
+    margin-bottom: 15px; /* Jarak gambar dengan teks */
+}
 
 .feature-item h3 {
     font-size: 18px;
@@ -340,124 +311,36 @@ body {
     color: #00bfff; /* Warna biru muda untuk ukuran */
 }
 
-/* @media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero .text {
-        max-width: 100%;
-    }
-    .hero .books {
-        justify-content: center;
-    }
-    .footer {
-        flex-direction: column;
-        align-items: center;
-    }
-    .footer .contact-form {
-        max-width: 100%;
-    }
-} */
-
-/* Untuk layar kecil (max-width: 768px) */
-/* @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-
-    header nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    header .user-menu {
-        align-self: flex-end;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px 20px;
-    }
-
-    .hero .text {
-        max-width: 100%;
-    }
-
-    .hero .search-bar {
-        flex-direction: column;
-    }
-
-    .hero .search-bar input {
-        border-radius: 5px;
-    }
-
-    .hero .search-bar button {
-        border-radius: 5px;
-        margin-top: 10px;
-    }
-
-    .hero .books {
-        justify-content: center;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-
-    .book-section .books {
-        justify-content: center;
-    }
-
-    .footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 30px 20px;
-    }
-
-    .footer .contact-form {
-        max-width: 100%;
-    }
-
-    .footer .contact-info {
-        align-items: center;
-    }
-} */
-
-/* Untuk layar sangat kecil (max-width: 480px) */
-/* @media (max-width: 480px) {
-    header {
+@media (max-width: 768px) {
+    .hero-section {
         padding: 20px;
     }
 
-    .hero h1 {
-        font-size: 32px;
+    .hero-section .hero {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .hero p {
-        font-size: 16px;
+    .hero-section .hero .text {
+        max-width: 100%;
+    }
+    .features-container {
+        flex-direction: column; /* Ubah tata letak menjadi vertikal */
+        gap: 15px; /* Kurangi jarak antar elemen */
     }
 
-    .hero .search-bar input {
-        font-size: 14px;
+    .feature-item {
+        flex: 1 1 100%; /* Elemen mengambil seluruh lebar */
+        max-width: none; /* Hilangkan batas lebar */
+    }
+    .books {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
 
-    .hero .search-bar button {
-        font-size: 14px;
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
     }
-
-    .hero .books img {
-        width: 120px;
-        height: 160px;
-    }
-
-    .book-section .books .book {
-        width: 120px;
-    }
-
-    .footer .contact-form h2 {
-        font-size: 20px;
-    }
-} */
+}
