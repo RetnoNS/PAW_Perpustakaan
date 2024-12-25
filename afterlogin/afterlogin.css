@@ -138,7 +138,7 @@ body {
 .filter h2 {
     font-size: 24px;
     font-weight: bold;
-    margin-left: 0;
+    margin-left: 100px;
 }
 
 /* Membuat jarak antara filter dan daftar buku */
