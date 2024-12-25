@@ -5,161 +5,109 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Perpustakaan Online</title>
-    @laravelPWA
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/beforelogin.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/landingpage.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <header class="top-bar">
-        <div class="logo">
-            <img alt="Library Logo" height="50" src="../img/emojione_books.png" width="50" />
-            <span>Perpustakaan <br>Online</span>
-        </div>
-        <nav>
-            <a href="#katalog">Katalog Buku</a>
-            <a href="/pinjambuku/pinjambuku.html">Pinjam Buku</a>
-            <a href="#contact-us">Contact Us</a>
+    <header>
+        <nav class="navbar bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+                <!-- Logo dan Teks -->
+                <div class="logo d-flex align-items-center ms-3">
+                    <img alt="Library Logo" height="50" src="../img/emojione_books.png" width="50" class="me-3" />
+                    <span class="fw-bold" style="color: #3b82f6;">Perpustakaan Online</span>
+                </div>
+            </div>
         </nav>
-        <div class="user-menu">
-            <a href="{{ route('login') }}" class="login-link">Login</a>
-        </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" data-aos="fade-in">
         <div class="bgblue">
             <img src="/img/Group 239182.png" alt="bgblue">
         </div>
         <div class="hero">
             <div class="text">
-                <h1>Selamat Datang <br>di <span>Perpustakaan <br> Online</span>!</h1>
+                <h1>Search & review <br>your <span>fav book</span> <br> effortlessly</h1>
                 <p>Embark on a literary journey like never before with our revolutionary library application!
                     Introducing a seamless experience that transcends traditional boundaries, where you can effortlessly
                     search your favorite books.</p>
-                <div class="search-bar">
-                    <input placeholder="Cari" type="text" />
-                    <button>Browse Now!</button>
+                <div class="start-now">
+                    <a href="/login/login.html">
+                        <button>Start Now →</button>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="book-section" id="katalog">
-        <div class="filter">
-            <select>
-                <option value="genre">Genre Buku </option>
-                <option value="genre">Fiksi Ilmiah </option>
-                <option value="genre">Fantasi </option>
-                <option value="genre">Romansa </option>
-                <option value="genre">Misteri </option>
-                <option value="genre">Biografi </option>
-                <option value="genre">Sejarah </option>
-                <option value="genre">Sains </option>
-            </select>
-            <h2>Buku</h2>
+    <!-- About Us Section -->
+    <section class="about-us" id="about-us" data-aos="fade-up">
+        <div class="about-us-content">
+            <h2>About Us</h2>
+            <p>Who We Are <br> "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nullam vehicula, orci sit amet pellentesque fermentum, quam augue tristique
+                risus, a tincidunt risus mi eget urna. Phasellus id eros ac lorem convallis
+                feugiat. Donec aliquet sapien sit amet facilisis efficitur." <br>
+                Mission Statement <br>
+                "To cultivate a love for reading, provide access to knowledge, and support lifelong
+                learning within our community." <br>
+                Core Values <br>
+                1. Knowledge Sharing <br>
+                "Promoting open access to information for everyone." <br>
+                2. Community Support <br>
+                "Fostering a welcoming space for collaboration and growth." <br>
+                3. Accessibility <br>
+                "Ensuring resources are available to all members of our diverse community." <br>
+                Meet Our Team <br>
+                ~ John Doe - Head Librarian <br>
+                "Dedicated to making knowledge accessible and fostering a learning community." <br>
+                ~ Jane Smith - Archivist <br>
+                "Passionate about preserving history for future generations."<br>
+                ~ Mark Johnson - Digital Resources Manager <br>
+                "Focused on leveraging technology to enhance library services."
+            </p>
         </div>
-        <!-- <h2>Buku</h2> -->
-        <div class="buku">
-            <div class="books">
-                <!-- Repeat book div as necessary -->
-                <div class="book">
-                    <img alt="Bumi" src="/img/Bumi.png" />
-                    <p>Bumi</p>
-                    <p class="author">Tere Liye</p>
-                    <div class="hover-content">
-                        <button class="wishlist">Add to wishlist</button>
-                        <button class="borrow">Add to pinjam buku</button>
-                    </div>
-                </div>
-                <div class="book">
-                    <img alt="Bulan" src="/img/Bulan.png" />
-                    <p>Bulan</p>
-                    <p class="author">Tere Liye</p>
-                    <div class="hover-content">
-                        <button class="wishlist">Add to wishlist</button>
-                        <button class="borrow">Add to pinjam buku</button>
-                    </div>
-                </div>
-                <div class="book">
-                    <img alt="Matahari" src="/img/Matahari.png" />
-                    <p>Matahari</p>
-                    <p class="author">Tere Liye</p>
-                    <div class="hover-content">
-                        <button class="wishlist">Add to wishlist</button>
-                        <button class="borrow">Add to pinjam buku</button>
-                    </div>
-                </div>
-                <div class="book">
-                    <img alt="Bintang" src="/img/Bintang.png" />
-                    <p>Bintang</p>
-                    <p class="author">Tere Liye</p>
-                    <div class="hover-content">
-                        <button class="wishlist">Add to wishlist</button>
-                        <button class="borrow">Add to pinjam buku</button>
-                    </div>
-                </div>
-                <div class="book">
-                    <img alt="Ceros dan Batozar" src="/img/Ceros dan Batozar.png" />
-                    <p>Ceros dan Batozar</p>
-                    <p class="author">Tere Liye</p>
-                    <div class="hover-content">
-                        <button class="wishlist">Add to wishlist</button>
-                        <button class="borrow">Add to pinjam buku</button>
-                    </div>
-                </div>
-                <div class="book">
-                    <img alt="Komet" src="/img/Komet.png" />
-                    <p>Komet</p>
-                    <p class="author">Tere Liye</p>
-                    <div class="hover-content">
-                        <button class="wishlist">Add to wishlist</button>
-                        <button class="borrow">Add to pinjam buku</button>
-                    </div>
-                </div>
-                <div class="book">
-                    <img alt="Komet Minor" src="/img/Komet Minor.png" />
-                    <p>Komet Minor</p>
-                    <p class="author">Tere Liye</p>
-                    <div class="hover-content">
-                        <button class="wishlist">Add to wishlist</button>
-                        <button class="borrow">Add to pinjam buku</button>
-                    </div>
-                </div>
-                <div class="book">
-                    <img alt="Selena" src="/img/Selena.png" />
-                    <p>Selena</p>
-                    <p class="author">Tere Liye</p>
-                    <div class="hover-content">
-                        <button class="wishlist">Add to wishlist</button>
-                        <button class="borrow">Add to pinjam buku</button>
-                    </div>
-                </div>
-                <div class="book">
-                    <img alt="Nebula" src="/img/Nebula.png" />
-                    <p>Nebula</p>
-                    <p class="author">Tere Liye</p>
-                    <div class="hover-content">
-                        <button class="wishlist">Add to wishlist</button>
-                        <button class="borrow">Add to pinjam buku</button>
-                    </div>
-                </div>
-                <!-- <div class="book">
-                    <p>Show More Books</p>
-                </div> -->
-                <div class="show-more">
-                    <a href="#" class="show-more-link">Show More Books</a>
-                </div>
+    </section>
+
+    <section class="features" id="features" data-aos="fade-up">
+        <h2 class="features-title">Features</h2>
+        <li><b>Apa yang bisa kamu lakukan?</b></li>
+        <div class="features-container">
+            <div class="feature-item" data-aos="fade-right">
+                <img src="/img/search.png" alt="Cari buku" class="feature-icon">
+                <h3>Cari buku dan katalog buku</h3>
+                <p>Effortlessly find your next read with our powerful and intuitive book search.</p>
+            </div>
+            <div class="feature-item" data-aos="fade-up">
+                <img src="/img/pinjam-buku.png" alt="Pinjam buku" class="feature-icon">
+                <h3>Pinjam buku</h3>
+                <p>Discover insightful critiques and share your thoughts on diverse literary masterpieces effortlessly.
+                </p>
+            </div>
+            <div class="feature-item" data-aos="fade-left">
+                <img src="/img/wishlist.png" alt="Wishlist buku" class="feature-icon">
+                <h3>Buku wishlist</h3>
+                <p>Curate your literary dreams—wishlist books for future adventures and discoveries.</p>
             </div>
         </div>
     </section>
 
-    <footer class="footer" id="contact-us">
+
+    <section class="features" id="features">
+
+    </section>
+
+    <footer class="footer" id="contact-us" data-aos="fade-up">
         <div class="contact-info">
             <div class="gbrinfo">
                 <img src="/img/fluent-color_library-20.png" alt="Library Icon" />
@@ -192,7 +140,11 @@
         <p>&copy; 2024 Perpustakaan Online. All rights reserved.</p>
     </div>
 
-    <script src="js/beforelogin.js"></script>
+    <script src="js/landingpage.js"></script>
 </body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 </html>
