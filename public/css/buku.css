@@ -7,6 +7,7 @@ body {
 }
 
 /* Sidebar Styles */
+<<<<<<< Updated upstream
 /* Global Styles */
 body {
     margin: 0;
@@ -30,6 +31,22 @@ body {
 .sidebar h2 {
     margin: 0 0 20px 0; /* Jarak lebih rapi */
     font-size: 1.7rem; /* Ukuran lebih kecil */
+=======
+.sidebar {
+    width: 200px;
+    background-color: #346BD6;
+    color: white;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    margin: 0 0 20px 0;
+    font-size: 1.7rem;
+>>>>>>> Stashed changes
     text-align: center;
 }
 
@@ -54,6 +71,7 @@ body {
     align-items: center;
     gap: 10px;
     border-radius: 5px;
+<<<<<<< Updated upstream
     width: 100%; /* Agar link penuh */
     transition: background-color 0.3s, color 0.3s;
 }
@@ -62,21 +80,36 @@ body {
     font-size: 16px; /* Ikon lebih kecil */
 }
 
+=======
+    width: 100%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+>>>>>>> Stashed changes
 .sidebar ul li a:hover {
     background-color: #2A6CBF;
 }
 
+<<<<<<< Updated upstream
+=======
+/* Content Styles */
+
+>>>>>>> Stashed changes
 .sidebar ul li.active a {
     background-color: white;
     color: #346BD6;
     font-weight: bold;
 }
 
+<<<<<<< Updated upstream
 /* Content Styles */
+=======
+>>>>>>> Stashed changes
 .content {
     flex: 1;
     padding: 20px;
     background-color: #f4f4f4;
+<<<<<<< Updated upstream
     overflow: auto; /* Mencegah konten memotong */
 }
 
@@ -123,16 +156,35 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     min-width: 150px; /* Ukuran minimal kategori */
+=======
+    overflow: auto;
+}
+
+.table-container {
+    margin-top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+>>>>>>> Stashed changes
 }
 
 /* Table Styles */
 .book-table {
     width: 100%;
     border-collapse: collapse;
+<<<<<<< Updated upstream
     background: white;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+=======
+>>>>>>> Stashed changes
 }
 
 .book-table th, .book-table td {
@@ -150,15 +202,25 @@ body {
 }
 
 /* Action Buttons */
+<<<<<<< Updated upstream
 /* Styles for Actions Column */
+=======
+>>>>>>> Stashed changes
 .action-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+<<<<<<< Updated upstream
     gap: 5px; 
     padding: 6px 9px; 
     font-size: 13px; 
     font-weight: 600; 
+=======
+    gap: 5px;
+    padding: 6px 9px;
+    font-size: 13px;
+    font-weight: 600;
+>>>>>>> Stashed changes
     border-radius: 5px;
     border: none;
     cursor: pointer;
@@ -168,15 +230,19 @@ body {
 
 .edit-btn {
     background-color: #346BD6;
+<<<<<<< Updated upstream
     width: 70px;
 }
 
 .edit-btn:hover {
     background-color: #2751A4;
+=======
+>>>>>>> Stashed changes
 }
 
 .delete-btn {
     background-color: #DC3545;
+<<<<<<< Updated upstream
     width: 70px; 
 }
 
@@ -193,3 +259,185 @@ body {
     text-align: center;
     width: 160px;
 }
+=======
+}
+
+/* Popup Alert */
+.popup-alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    opacity: 1;
+    transition: opacity 0.5s ease-out, top 0.5s ease-out;
+}
+
+.popup-alert.hide {
+    opacity: 0;
+    top: 0px;
+}
+
+.modal-body .form-group {
+    margin-bottom: 15px;
+}
+
+.modal-body input, .modal-body select, .modal-body textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #6c757d;
+}
+
+.modal-footer .btn-primary {
+    background-color: #007bff;
+}
+
+/* Popup Form Overlay */
+.form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6); /* Transparansi lebih gelap */
+    display: none; /* Tampilkan form secara fleksibel */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out; /* Animasi masuk/keluar */
+    opacity: 0; /* Default sembunyi */
+    pointer-events: none;
+}
+
+.form-overlay.active {
+    opacity: 1;
+    pointer-events: all; /* Aktifkan klik */
+    display: flex;
+}
+
+/* Popup Form Content */
+.form-content {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Bayangan */
+    width: 100%;
+    max-width: 500px; /* Batas lebar maksimum */
+    animation: scale-in 0.3s ease-out; /* Animasi muncul */
+}
+
+@keyframes scale-in {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Form Header */
+.form-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+/* Form Body */
+.form-content .form-group {
+    margin-bottom: 15px;
+}
+
+.form-content .form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-content .form-group input,
+.form-content .form-group select,
+.form-content .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-content .form-group input:focus,
+.form-content .form-group select:focus,
+.form-content .form-group textarea:focus {
+    border-color: #346BD6;
+}
+
+/* Form Footer */
+.form-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form-footer .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-footer .btn.cancel {
+    background-color: #6c757d;
+    color: white;
+}
+
+.form-footer .btn.cancel:hover {
+    background-color: #565e64;
+}
+
+.form-footer .btn.submit {
+    background-color: #346BD6;
+    color: white;
+}
+
+.form-footer .btn.submit:hover {
+    background-color: #2751A4;
+}
+
+/* Close Button */
+.form-content .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.form-content .close-btn:hover {
+    color: #dc3545;
+}
+>>>>>>> Stashed changes

@@ -82,8 +82,13 @@ body {
 
 .search-wrapper {
     display: flex;
+<<<<<<< Updated upstream
     flex: 1; 
     max-width: 600px; 
+=======
+    flex: 1;
+    max-width: 600px;
+>>>>>>> Stashed changes
     border: 1px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
@@ -142,10 +147,15 @@ body {
 
 /* Action Buttons */
 /* Styles for Actions Column */
+<<<<<<< Updated upstream
+=======
+/* Action Buttons */
+>>>>>>> Stashed changes
 .action-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+<<<<<<< Updated upstream
     gap: 5px; 
     padding: 6px 9px; 
     font-size: 13px; 
@@ -155,11 +165,32 @@ body {
     cursor: pointer;
     color: white;
     transition: background-color 0.3s ease;
+=======
+    gap: 5px;
+    padding: 8px 12px; /* Sedikit lebih besar untuk aksesibilitas */
+    font-size: 14px; /* Ukuran font lebih konsisten */
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease; /* Tambahkan smooth effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk tombol */
+}
+
+.action-btn:hover {
+    transform: translateY(-2px); /* Efek hover dengan sedikit mengangkat tombol */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+>>>>>>> Stashed changes
 }
 
 .edit-btn {
     background-color: #346BD6;
+<<<<<<< Updated upstream
     width: 70px;
+=======
+    width: 80px; /* Lebar yang lebih konsisten */
+>>>>>>> Stashed changes
 }
 
 .edit-btn:hover {
@@ -168,7 +199,11 @@ body {
 
 .delete-btn {
     background-color: #DC3545;
+<<<<<<< Updated upstream
     width: 70px; 
+=======
+    width: 80px; /* Sama seperti edit-btn */
+>>>>>>> Stashed changes
 }
 
 .delete-btn:hover {
@@ -176,11 +211,39 @@ body {
 }
 
 .action-btn i {
+<<<<<<< Updated upstream
     font-size: 14px; 
+=======
+    font-size: 16px; /* Ikon lebih proporsional */
+    line-height: 1; /* Menghilangkan ruang vertikal ekstra */
+>>>>>>> Stashed changes
 }
 
 /* Table Column Widths */
 .user-table td:last-child {
     text-align: center;
+<<<<<<< Updated upstream
     width: 160px;
 }
+=======
+    width: 180px; /* Lebar sedikit ditambah untuk kesesuaian */
+    vertical-align: middle; /* Align teks di tengah secara vertikal */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .action-btn {
+        width: auto; /* Biarkan tombol menyesuaikan lebar konten */
+        padding: 6px 10px;
+        font-size: 12px; /* Kurangi font size untuk layar kecil */
+    }
+
+    .edit-btn, .delete-btn {
+        width: auto; /* Sesuaikan otomatis pada layar kecil */
+    }
+
+    .user-table td:last-child {
+        width: auto; /* Biarkan tabel fleksibel di layar kecil */
+    }
+}
+>>>>>>> Stashed changes

@@ -62,18 +62,20 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Harry Potter</td>
-                    <td>zidni</td>
-                    <td><span class="status overdue">Overdue</span></td>
-                    <td>2024-12-01</td>
-                </tr>
-                <tr>
-                    <td>The Hobbit</td>
-                    <td>retno nisa</td>
-                    <td><span class="status in-progress">In Progress</span></td>
-                    <td>2024-12-15</td>
-                </tr>
+                @foreach ($loans as $loan)
+                    <tr>
+                        <td>{{ $loan->booking->book->title ?? 'Unknown Book' }}</td>
+                        <td>{{ $loan->user->fullname ?? 'Unknown User' }}</td>
+                        <td>
+                            <span
+                                class="status
+                                {{ $loan->status === 'dikembalikan' ? 'returned' : ($loan->status === 'belum' && $loan->tanggal_pengembalian < now() ? 'overdue' : 'in-progress') }}">
+                                {{ $loan->status }}
+                            </span>
+                        </td>
+                        <td>{{ $loan->tanggal_pengembalian }}</td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

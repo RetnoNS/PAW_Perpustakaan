@@ -30,6 +30,7 @@
         </ul>
     </div>
 
+<<<<<<< Updated upstream
     <!-- Content -->
     <div class="content">
         <div class="search-bar">
@@ -41,6 +42,18 @@
             </div>
             <select class="category-select">
                 <option>Status</option>
+=======
+    <div class="content">
+        <div class="search-bar">
+            <div class="search-wrapper">
+                <input type="text" class="search-input" placeholder="Cari transaksi...">
+                <button class="search-btn">Cari</button>
+            </div>
+            <select class="category-select">
+                <option value="all">Semua Kategori</option>
+                <option value="overdue">Terlambat</option>
+                <option value="returned">Dikembalikan</option>
+>>>>>>> Stashed changes
             </select>
         </div>
 
@@ -51,6 +64,7 @@
                     <th>User</th>
                     <th>Tanggal Dipinjam</th>
                     <th>Tenggat Waktu</th>
+<<<<<<< Updated upstream
                     <th>Action</th>
                 </tr>
             </thead>
@@ -83,6 +97,37 @@
                         </button>
                     </td>
                 </tr>
+=======
+                    <th>Status</th>
+                    <th>Denda</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($loans as $loan)
+                <tr>
+                    <td>{{ $loan->booking->book->title }}</td>
+                    <td>{{ $loan->booking->user->fullname }}</td>
+                    <td>{{ $loan->tanggal_peminjaman }}</td>
+                    <td>{{ $loan->tanggal_pengembalian }}</td>
+                    <td>{{ ucfirst($loan->status) }}</td>
+                    <td>Rp {{ number_format($loan->denda, 0, ',', '.') }}</td>
+                    <td>
+                        <form action="{{ route('dashboard.loans.update', $loan->id) }}" method="POST">
+                            @csrf
+                            @method('PUT')
+                            <select name="status" class="status-select">
+                                <option value="belum" {{ $loan->status === 'belum' ? 'selected' : '' }}>Belum</option>
+                                <option value="dikembalikan" {{ $loan->status === 'dikembalikan' ? 'selected' : '' }}>Dikembalikan</option>
+                            </select>
+                            <button type="submit" class="action-btn edit-btn">
+                                <i class="fas fa-save"></i> Simpan
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+>>>>>>> Stashed changes
             </tbody>
         </table>
     </div>

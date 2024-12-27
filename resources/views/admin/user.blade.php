@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data User - Admin Panel</title>
+<<<<<<< Updated upstream
     <!-- Tambahkan Font Awesome untuk ikon -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+=======
+    <!-- Tambahkan Bootstrap CSS dan Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+>>>>>>> Stashed changes
     <link rel="stylesheet" href="/css/user.css">
 </head>
 
@@ -32,6 +38,7 @@
 
     <!-- Content -->
     <div class="content">
+<<<<<<< Updated upstream
         <div class="search-bar">
             <div class="search-wrapper">
                 <input type="text" placeholder="Cari..." class="search-input">
@@ -48,6 +55,16 @@
                     <th>Password</th>
                     <th>Email</th>
                     <th>Phone Number</th>
+=======
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
+>>>>>>> Stashed changes
                     <th>Action</th>
                 </tr>
             </thead>
@@ -55,6 +72,7 @@
                 @foreach ($users as $user)
                 <tr>
                     <td>{{ $user->username }}</td>
+<<<<<<< Updated upstream
                     <td>••••••</td> <!-- Menyembunyikan password -->
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->phone_number }}</td>
@@ -62,6 +80,17 @@
                         <a href="{{ route('dashboard.users.edit', $user->id) }}" class="action-btn edit-btn">
                             <i class="fas fa-edit"></i> Edit
                         </a>
+=======
+                    <td>{{ $user->email }}</td>
+                    <td> •••••• </td>
+                    <td>{{ $user->phone_number }}</td>
+                    <td>{{ $user->address }}</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm"
+                            onclick="openEditModal('{{ $user->id }}', '{{ $user->username }}', '{{ $user->phone_number }}', '{{ $user->address }}')">
+                            <i class="fas fa-edit"></i> Edit
+                        </button>
+>>>>>>> Stashed changes
                         <form method="POST" action="{{ route('dashboard.users.delete', $user->id) }}" style="display:inline;">
                             @csrf
                             @method('DELETE')
@@ -74,7 +103,60 @@
                 @endforeach
             </tbody>
         </table>
+<<<<<<< Updated upstream
     </div>
+=======
+        @if (session('success'))
+            <div class="popup-alert alert-success" id="success-alert">
+                {{ session('success') }}
+            </div>
+        @endif
+
+    </div>
+
+    <!-- Modal Edit User -->
+    <div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editUserModalLabel">Edit User</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="editForm" method="POST">
+                    @csrf
+                    @method('PUT')
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone_number" class="form-label">Phone Number</label>
+                            <input type="text" class="form-control" id="phone_number" name="phone_number" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="address" name="address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Kosongkan jika tidak ingin diubah">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="/js/user.js"></script>
+>>>>>>> Stashed changes
 </body>
 
 </html>
