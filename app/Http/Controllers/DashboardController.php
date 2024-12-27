@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< Updated upstream
 use App\Models\Book;
 use App\Models\loan;
 use App\Models\User;
@@ -19,9 +18,6 @@ class DashboardController extends Controller
             ->count();
         return view('admin.dashboard', compact('totalUsers', 'totalBooks', 'lateReturns'));
     }
-use App\Models\Book;
-use App\Models\Genre;
-use Illuminate\Http\Request;
 
     // user controller
     public function users()
