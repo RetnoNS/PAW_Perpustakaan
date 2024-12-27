@@ -30,19 +30,6 @@
         </ul>
     </div>
 
-<<<<<<< Updated upstream
-    <!-- Content -->
-    <div class="content">
-        <div class="search-bar">
-            <div class="search-wrapper">
-                <input type="text" placeholder="Cari..." class="search-input">
-                <button class="search-btn">
-                    <i class="fas fa-search"></i>
-                </button>
-            </div>
-            <select class="category-select">
-                <option>Status</option>
-=======
     <div class="content">
         <div class="search-bar">
             <div class="search-wrapper">
@@ -53,7 +40,6 @@
                 <option value="all">Semua Kategori</option>
                 <option value="overdue">Terlambat</option>
                 <option value="returned">Dikembalikan</option>
->>>>>>> Stashed changes
             </select>
         </div>
 
@@ -64,40 +50,6 @@
                     <th>User</th>
                     <th>Tanggal Dipinjam</th>
                     <th>Tenggat Waktu</th>
-<<<<<<< Updated upstream
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Harry Potter</td>
-                    <td>zidni</td>
-                    <td>2024-12-01</td>
-                    <td>2024-12-15</td>
-                    <td>
-                        <button class="action-btn edit-btn">
-                            <i class="fas fa-edit"></i> Edit
-                        </button>
-                        <button class="action-btn delete-btn">
-                            <i class="fas fa-trash"></i> Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>The Hobbit</td>
-                    <td>retno nisa</td>
-                    <td>2024-12-05</td>
-                    <td>2024-12-20</td>
-                    <td>
-                        <button class="action-btn edit-btn">
-                            <i class="fas fa-edit"></i> Edit
-                        </button>
-                        <button class="action-btn delete-btn">
-                            <i class="fas fa-trash"></i> Delete
-                        </button>
-                    </td>
-                </tr>
-=======
                     <th>Status</th>
                     <th>Denda</th>
                     <th>Aksi</th>
@@ -127,7 +79,6 @@
                     </td>
                 </tr>
                 @endforeach
->>>>>>> Stashed changes
             </tbody>
         </table>
     </div>

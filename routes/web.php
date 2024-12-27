@@ -28,21 +28,14 @@ Route::middleware(['auth', 'verified' ,'user'])->group(function () {
 
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
     Route::get('/dashboard/users', [DashboardController::class, 'users'])->name('dashboard.users');
     Route::get('/dashboard/books', [DashboardController::class, 'books'])->name('dashboard.books');
     Route::get('/dashboard/loans', [DashboardController::class, 'loans'])->name('dashboard.loans');
 
     // Tambahan untuk fitur edit dan delete
-<<<<<<< Updated upstream
     Route::get('/dashboard/users/{user}/edit', [DashboardController::class, 'editUser'])->name('dashboard.users.edit');
     Route::put('/dashboard/users/{user}', [DashboardController::class, 'updateUser'])->name('dashboard.users.update');
     Route::delete('/dashboard/users/{user}', [DashboardController::class, 'deleteUser'])->name('dashboard.users.delete');
-=======
     Route::put('/dashboard/users/{user}', [DashboardController::class, 'updateUser'])->name('dashboard.users.update');
     Route::delete('/dashboard/users/{user}', [DashboardController::class, 'deleteUser'])->name('dashboard.users.delete');
     Route::get('/dashboard/users/{user}', [DashboardController::class, 'getUser']);
@@ -55,11 +48,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     //loans
     Route::put('/dashboard/loans/{id}', [DashboardController::class, 'updateLoanStatus'])->name('dashboard.loans.update');
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 });
 
 Route::get('/profile', function () {

@@ -2,13 +2,6 @@
 
 namespace App\Models;
 
-<<<<<<< Updated upstream
-use Illuminate\Database\Eloquent\Model;
-
-class loan extends Model
-{
-    //
-=======
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -55,5 +48,4 @@ class Loan extends Model
         return $value;
     }
 
->>>>>>> Stashed changes
 }

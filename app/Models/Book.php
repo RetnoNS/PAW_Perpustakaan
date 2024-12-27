@@ -2,13 +2,6 @@
 
 namespace App\Models;
 
-<<<<<<< Updated upstream
-use Illuminate\Database\Eloquent\Model;
-
-class Book extends Model
-{
-    //
-=======
 use App\Models\Genre;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -34,5 +27,4 @@ class Book extends Model
     {
         return $this->belongsToMany(Genre::class, 'book_genre', 'book_id', 'genre_id');
     }
->>>>>>> Stashed changes
 }

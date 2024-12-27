@@ -5,15 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Buku - Admin Panel</title>
-<<<<<<< Updated upstream
-    <!-- Tambahkan Font Awesome untuk ikon -->
-    <link rel="stylesheet" href="/css/buku.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-=======
     <link rel="stylesheet" href="/css/buku.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
->>>>>>> Stashed changes
 </head>
 
 <body>
@@ -44,109 +38,14 @@
                 <button class="search-btn">
                     <i class="fas fa-search"></i>
                 </button>
-<<<<<<< Updated upstream
-            </div>
-            <select class="category-select">
-                <option>Kategori</option>
-            </select>
-=======
                 <button id="showFormButton" onclick="openForm()">Tambah Buku</button>
             </div>
->>>>>>> Stashed changes
         </div>
 
         <table class="book-table">
             <thead>
                 <tr>
                     <th>Judul</th>
-<<<<<<< Updated upstream
-                    <th>Penulis</th>
-                    <th>Kategori</th>
-                    <th>Publisher</th>
-                    <th>Stok</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Harry Potter</td>
-                    <td>J.K. Rowling</td>
-                    <td>Fantasy</td>
-                    <td>Bloomsbury</td>
-                    <td>10</td>
-                    <td>
-                        <button class="action-btn edit-btn">
-                            <i class="fas fa-edit"></i> Edit
-                        </button>
-                        <button class="action-btn delete-btn">
-                            <i class="fas fa-trash"></i> Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>The Hobbit</td>
-                    <td>J.R.R. Tolkien</td>
-                    <td>Fantasy</td>
-                    <td>HarperCollins</td>
-                    <td>5</td>
-                    <td>
-                        <button class="action-btn edit-btn">
-                            <i class="fas fa-edit"></i> Edit
-                        </button>
-                        <button class="action-btn delete-btn">
-                            <i class="fas fa-trash"></i> Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1984</td>
-                    <td>George Orwell</td>
-                    <td>Dystopian</td>
-                    <td>Secker & Warburg</td>
-                    <td>8</td>
-                    <td>
-                        <button class="action-btn edit-btn">
-                            <i class="fas fa-edit"></i> Edit
-                        </button>
-                        <button class="action-btn delete-btn">
-                            <i class="fas fa-trash"></i> Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>To Kill a Mockingbird</td>
-                    <td>Harper Lee</td>
-                    <td>Classic</td>
-                    <td>J.B. Lippincott & Co.</td>
-                    <td>7</td>
-                    <td>
-                        <button class="action-btn edit-btn">
-                            <i class="fas fa-edit"></i> Edit
-                        </button>
-                        <button class="action-btn delete-btn">
-                            <i class="fas fa-trash"></i> Delete
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>The Catcher in the Rye</td>
-                    <td>J.D. Salinger</td>
-                    <td>Classic</td>
-                    <td>Little, Brown and Company</td>
-                    <td>6</td>
-                    <td>
-                        <button class="action-btn edit-btn">
-                            <i class="fas fa-edit"></i> Edit
-                        </button>
-                        <button class="action-btn delete-btn">
-                            <i class="fas fa-trash"></i> Delete
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-=======
                     <th>Pengarang</th>
                     <th>Genre</th>
                     <th>Tahun Terbit</th>
@@ -268,7 +167,6 @@
     </div>
 
     <script src="/js/buku.js"></script>
->>>>>>> Stashed changes
 </body>
 
 </html>

@@ -2,13 +2,6 @@
 
 namespace App\Models;
 
-<<<<<<< Updated upstream
-use Illuminate\Database\Eloquent\Model;
-
-class booking extends Model
-{
-    //
-=======
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -48,5 +41,4 @@ class Booking extends Model
         return $this->booking->book->price; // Mengambil harga dari buku yang dipinjam
     }
 
->>>>>>> Stashed changes
 }
